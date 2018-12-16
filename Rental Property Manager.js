@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var agreement_1 = require("./agreement");
+var dwelling_1 = require("./dwelling");
+var script_1 = require("./script");
+var whiteHouse = new dwelling_1.House("1600 Pennsylvania Ave.", 100, 200, 6000, false, dwelling_1.DwellingType.duplex);
+var villa = new dwelling_1.House("123 Cherry St.", 100, 120, 8000, true, dwelling_1.DwellingType.twoStory);
+var hut = new dwelling_1.House("1 Tropical Island Ln.", 1, 0, 49, true, dwelling_1.DwellingType.rambler);
+var van = new dwelling_1.House("Down By the River", 1, 1, 16, true, dwelling_1.DwellingType.rambler);
+exports.allHouses = [whiteHouse, villa, hut, van];
+script_1.getAllHouses();
+script_1.logFirstAvailable();
+var rentalAgreement = new agreement_1.Agreement();
+var serviceAgreement = new agreement_1.Agreement();
